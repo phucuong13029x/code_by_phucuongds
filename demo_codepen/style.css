@@ -1,0 +1,194 @@
+  * {
+    box-sizing: inherit;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    font-family: system-ui, sans-serif;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+footer{
+  display:none !important;
+  }
+  .Playground--editor,
+  .Playground--preview {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+  }
+
+  .Playground--editor {
+    font-size: inherit;
+    font-family: var(--monospace-font-family);
+    line-height: 1.4;
+    color: inherit;
+    left: 0;
+    padding: 1em;
+    background: transparent;
+    border: 0;
+    resize: none;
+  }
+
+  .Playground--editor::selection {
+    background: rgba(var(--color-rgb), .2);
+    color: var(--color);
+  }
+
+  .Playground--editor:focus {
+    outline: none;
+  }
+
+  .Playground--preview {
+    right: 0;
+    background: #fff;
+  }
+
+  .Playground--preview iframe {
+    position: absolute;
+    border: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  .Playground--starters {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    z-index: 1;
+  }
+
+  .Playground--starters-dropdown {
+    position: relative;
+  }
+
+  .Playground--starters-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1.25em;
+    width: .5em;
+    padding: .75em;
+    border: .25em solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 0 0 var(--focus-size) var(--focus-color);
+    cursor: pointer;
+    border-radius: .5em;
+  }
+
+  @media (hover: hover) {
+    .Playground--starters-button:hover {
+      background-color: rgba(var(--color-rgb), .1);
+    }
+  }
+
+  .Playground--starters-button[is-focus-visible] {
+    background-color: rgba(var(--color-rgb), .1);
+  }
+
+  [js-focus-visible-polyfill-available] .Playground--starters-button:focus {
+    outline: none;
+  }
+
+  .Playground--starters-button:not([is-focus-visible]) {
+    --focus-size: 0em;
+  }
+
+  .Playground--starters-button::-webkit-details-marker,
+  .Playground--starters-button::marker {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    display: none;
+  }
+
+  .Playground--starters-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .Playground--starters-menu {
+    position: absolute;
+    font-size: 1.25em;
+    top: 2.75rem;
+    right: .125em;
+    background: #fff;
+    box-shadow: 0 .1em .3em rgba(var(--color-rgb), .3);
+    border-radius: .25em;
+    padding: .425em 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  .Playground--starters-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .Playground--starters-separator {
+    height: 1px;
+    margin: .425em 0;
+    background: rgba(var(--color-rgb), .2);
+  }
+
+  .Playground--starters-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 0 .7em 0 .8em;
+    box-shadow: 0 0 0 var(--focus-size) var(--focus-color);
+  }
+
+  [js-focus-visible-polyfill-available] .Playground--starters-link:focus {
+    outline: none;
+  }
+
+  .Playground--starters-link:not([is-focus-visible]) {
+    --focus-size: 0em;
+  }
+
+  @media (hover: hover) {
+    .Playground--starters-link:hover {
+      background: rgba(var(--color-rgb), .1);
+    }
+  }
+
+  .Playground--starters-link:focus {
+    background: rgba(var(--color-rgb), .1);
+  }
+
+  @media (max-width: 768px) {
+    .Playground--editor,
+    .Playground--preview {
+      left: 0;
+      width: 100%;
+      height: 50%;
+    }
+
+    .Playground--editor {
+      top: 50%;
+    }
+
+    .Playground--preview {
+      top: 0;
+    }
+
+    .Playground--starters {
+      top: 50%;
+      right: 0;
+    }
+  }
