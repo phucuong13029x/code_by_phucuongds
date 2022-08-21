@@ -3,7 +3,7 @@ const params = new URLSearchParams(location.search)
   const startersEl = document.querySelector("[data-starters]")
   const startersListEl = document.querySelector("[data-starters-list]")
   const playgroundEl = document.querySelector("[data-js-playground]")
-
+/* edit on website
   const starters = {
     new: {
       hidden: true,
@@ -45,7 +45,7 @@ const params = new URLSearchParams(location.search)
       value: `<style>\n  * { margin: 0 }\n\n  body {\n    font-family: system-ui, sans-serif;\n    display: grid;\n    place-content: center;\n    text-align: center;\n    height: 100%;\n  }\n\n  h1 {\n    font-size: 15vw;\n    font-weight: 900;\n    letter-spacing: -.03em;\n    padding-right: .0625em;\n    padding-bottom: 6.5vh;\n  }\n</style>\n\n<h1 id=h1 data-text=Playground></h1>\n\n${"<"}script>\n  text = h1.getAttribute("data-text")\n  i = setInterval(() => {\n    h1.textContent = text.slice(0, h1.textContent.length + 1)\n    if (h1.textContent === text) clearInterval(i)\n  }, 200)\n${"<"}/script>\n`
     }
   }
-
+*/
   Object.entries(starters).forEach(([key, starter]) => {
     if (starter.hidden) return
 
