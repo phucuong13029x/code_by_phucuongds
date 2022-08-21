@@ -80,7 +80,7 @@ const params = new URLSearchParams(location.search)
   } else if (params.get("v")) {
     inputEl.value = atob(decodeURIComponent(params.get("v")))
   } else {
-    inputEl.value = starters.welcome.value
+    inputEl.value = starters.empty.value
   }
 
   document.body.addEventListener("click", event => {
