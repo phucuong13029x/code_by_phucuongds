@@ -1,0 +1,48 @@
+<div class='music-box'>
+    <div class='top-bar'>
+        <i class='has-svg-icon music-more-icons'></i>
+        <span>Now Playing</span>
+        <i class='has-svg-icon music-horiz-icons'></i>
+    </div>
+    <div class='img-area'>
+        <img alt='' loading='lazy' src='' title='' />
+    </div>
+    <div class='song-details'>
+        <p class='name'></p>
+        <p class='artist'></p>
+    </div>
+    <div class='progress-area'>
+        <div class='progress-bar'>
+            <audio id='main-audio' src=''></audio>
+        </div>
+        <div class='song-timer'>
+            <span class='current-time'>0:00</span>
+            <span class='max-duration'>0:00</span>
+        </div>
+    </div>
+    <div class='controls'>
+        <i class='has-svg-icon music-repeat-icons' id='repeat-plist' title='Playlist looped'><span>repeat</span></i>
+        <i class='has-svg-icon music-skippre-icons' id='prev'></i>
+        <div class='play-pause'>
+            <i class='has-svg-icon music-play-icons play'></i>
+        </div>
+        <i class='has-svg-icon music-skipnext-icons' id='next'></i>
+        <i class='has-svg-icon music-queue-icons' id='more-music'></i>
+    </div>
+    <div class='slider_volumn'>
+        <i class='has-svg-icon icon-volume-down' id='min-volume'></i>
+        <input class='volume_slider' max='100' min='1' onchange='setVolume()' type='range' value='100' />
+        <i class='has-svg-icon icon-volume-up' id='max-volume'></i>
+    </div>
+    <div class='music-list'>
+        <div class='header-music'>
+            <div class='row-music'>
+                <i class='has-svg-icon list music-queuemenu-icons'></i>
+                <span>Music list</span>
+            </div>
+            <i class='has-svg-icon music-close-icons' id='close'></i>
+        </div>
+        <ul>
+        </ul>
+    </div>
+</div>

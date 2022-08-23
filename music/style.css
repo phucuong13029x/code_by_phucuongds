@@ -1,0 +1,39 @@
+.music-box{width:100%;padding:10px;overflow:hidden;position:relative;background:#fff;box-shadow:0 6px 15px 0 12px 25px 0 rgb(30 30 30 / 4%)}
+.music-box i{cursor:pointer}
+.top-bar,.progress-area .song-timer,.music-list .header-music,.music-list ul li{display:flex;align-items:center;justify-content:space-between}
+.controls{display:flex;align-items:center;justify-content:space-evenly}
+.top-bar span{font-size:16px;margin-left:-3px;color:#555}
+.img-area{width:185px;height:185px;position:relative;overflow:hidden;margin:15px auto 0;border:5px solid #fff;border-radius:50%;box-shadow:0 6px 12px rgba(0,0,0,0.09)}
+.img-area:before{content:'';position:absolute;top:50%;left:50%;width:20px;height:20px;transform:translate(-50%, -50%);background-color:#d6dee7;border-radius:50%;box-shadow:inset 0 0 0 2px #fff;z-index:2}
+.img-area img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.music-box.paused .img-area img{animation: rotateAlbumArt 3s linear 0s infinite forwards}
+.song-details{text-align:center;margin:20px 0}
+.song-details p{color:#666}
+.song-details .name{font-size:16px}
+.song-details .artist{font-size:13px;opacity:.9;line-height:35px}
+.progress-area{height:10px;width:100%;border-radius:50px;background:#f0f0f0;cursor:pointer}
+.progress-area .progress-bar{height:inherit;width:0;position:relative;border-radius:inherit;background:linear-gradient(90deg,#7577a9 0%,#66689c 100%)}
+.progress-area .song-timer{margin-top:5px}
+.song-timer span{font-size:13px;color:#666}
+.controls{margin:30px 0 20px}
+.controls .play-pause{height:30px;width:30px;display:flex;cursor:pointer;align-items:center;justify-content:center;border-radius:50%;background:#fff}
+.play-pause::before{position:absolute;content:"";height:30px;width:30px;border-radius:inherit;background:linear-gradient(#7577a9 0%,#66689c 100%)}
+.play-pause i{position:absolute}
+.music-list{position:absolute;background:#fff;width:100%;left:0;bottom:-55%;opacity:0;pointer-events:none;z-index:5;padding:15px 30px;box-shadow:0 -5px 10px rgba(0,0,0,0.05);transition:all .15s ease-out}
+#repeat-plist > span{display:none}
+.music-list.show{bottom:0;opacity:1;pointer-events:auto}
+.header-music .row-music{display:flex;align-items:center;font-size:19px}
+.header-music .row-music i{cursor:default}
+.header-music .row-music span{margin-left:5px;font-size:15px;color:#666666}
+.music-list ul{margin:10px 0!important;max-height:260px;overflow:auto}
+.music-list ul::-webkit-scrollbar{width:0}
+.music-list ul li{list-style:none;display:flex;cursor:pointer;padding-bottom:10px;margin-bottom:10px;color:#666;border-bottom:1px solid #E5E5E5}
+.music-list ul li:last-child{border-bottom:0}
+.music-list ul li .row span{font-size:15px}
+.music-list ul li .row p{opacity:.9;font-size:13px;margin-top:5px}
+ul li .audio-duration{font-size:13px}
+ul li.playing{pointer-events:none;color:#66689c}
+.slider_volumn{display:flex;justify-content:center;align-items:center}
+.volume_slider{height:10px;width:100%;border-radius:50px;background:#f0f0f0;cursor:pointer;padding:0;overflow:hidden}
+.volume_slider::-webkit-slider-thumb{-webkit-appearance:none;-moz-appearance:none;appearance:none;width:10px;height:10px;background:#66689c;cursor:pointer;border-radius:0 50% 50% 0;box-shadow:-350px 0px 0px 340px #66689c}
+@keyframes rotateAlbumArt{0%{ transform: rotateZ(0)}100%{ transform: rotateZ(360deg)}}
